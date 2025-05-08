@@ -97,30 +97,6 @@ input:focus~label,input:not(:placeholder-shown)~label{
 .btn:hover{
     background: #8A9A5B;
 }
-.or{
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
-    text-align: center;
-    color: white;
-}
-.icons{
-   text-align: center; 
-}
-.icons i{
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border: 2px solid black;
-    margin: 0 15px;
-    transition: 1s;
-}
-.icons i:hover{
-    background: black;
-    font-size: 1.6rem;
-    border: 2px solid #8A9A5B;
-}
 .links{
     display: flex;
     justify-content: space-around;
