@@ -17,7 +17,10 @@
         </ul>
         
     </header>
-      <div class="container" id = "signup" style="display: none;">
+    <?php
+    $show_signup = isset($_GET['form']) && $_GET['form'] == 'signup';
+    ?>
+      <div class="container" id = "signup" style="display: <?php echo $show_signup ? 'block' : 'none'; ?>;">
         <h1 class = "form-title">Register</h1>
         <form  method= "post" action="register.php">
             <div class="input-group">
@@ -45,20 +48,16 @@
         <p class="or">
             --------or--------
         </p>
-        <div class="icons">
-            <i class="fab fa-google"></i>
-            <i class="fab fa-facebook"></i>
-        </div>
         <div class="links">
             <p>
                 Already Have an Account?
             </p>
-            <button id="signInButton">Sign In</button>
+            <a href="index.php?form=signin"><button id="signInButton">Sign In</button></a>
         </div>
       </div>
 
 
-      <div class="container" id = "signIn">
+      <div class="container" id = "signIn" style="display: <?php echo !$show_signup ? 'block' : 'none'; ?>;">
         <h1 class = "form-title">Sign In</h1>
         <form  method= "post" action="register.php">
             <div class="input-group">
@@ -87,9 +86,8 @@
             <p>
                 Don't have an account?
             </p>
-            <button id="signUpButton">Sign Up</button>
+            <a href="index.php?form=signup"><button id="signUpButton">Sign Up</button></a> 
         </div>
       </div>
-      <script src="script.js"></script>
 </body>
 </html>
